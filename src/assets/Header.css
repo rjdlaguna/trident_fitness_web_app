@@ -1,0 +1,21 @@
+.menu-content{
+    background-color: #fff;
+    color: #4B5320;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu-content ul{
+    list-style: none;
+    display: flex;  
+    gap: 100px;
+    justify-content: end;
+    font-size: 16px;
+}
+
+.menu-content ul li{
+    padding: 20px;
+}
+
+

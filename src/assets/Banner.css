@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'AntonFont';
+    src: url('./fonts/Anton-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSansCondensed';
+    src: url('./fonts/FiraSansCondensed-Italic.ttf');
+}
+
+.banner-container{
+    width: 100%;
+    position: relative;
+}
+
+.banner-container figure img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    opacity: 60%;
+}
+
+.banner-container .banner-text{
+    position: absolute;
+    font-size: 95px;
+    font-weight: bold;
+    top: 30%;
+    left: 10%;
+    font-family:'FiraSansCondensed',sans-serif;
+    text-shadow: 4px 1px #4B5320;
+    line-height: 110px;
+}
