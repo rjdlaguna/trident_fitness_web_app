@@ -10,6 +10,11 @@
     src: url('./fonts/FiraSansCondensed-Italic.ttf');
 }
 
+@font-face {
+    font-family: 'FiraSansCondensedRegular';
+    src: url('./fonts/FiraSansCondensed-Regular.ttf');
+}
+
 .banner-container{
     width: 100%;
     position: relative;
@@ -23,7 +28,7 @@
     opacity: 60%;
 }
 
-.banner-container .banner-text{
+.banner-container .banner-heading{
     position: absolute;
     font-size: 95px;
     font-weight: bold;
@@ -33,3 +38,34 @@
     text-shadow: 4px 1px #4B5320;
     line-height: 110px;
 }
+
+.banner-container .banner-text{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: 18px;
+    width: 750px;
+    font-family: 'FiraSansCondensedRegular',sans-serif;
+}
+
+.banner-container .banner-text button{
+    background-color: #778729;
+    width: 200px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    text-align: center;
+    color:white;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'FiraSansCondensedRegular',sans-serif;
+    font-size: 18px;
+    border:none;
+}
+
+.banner-container .banner-text button:hover{
+    cursor: pointer;
+    background-color:#d0e655;
+    color:#4B5320;  
+}
+
