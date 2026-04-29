@@ -37,15 +37,26 @@
     font-family:'FiraSansCondensed',sans-serif;
     text-shadow: 4px 1px #4B5320;
     line-height: 110px;
+    font-size: clamp(5rem, 8vw, 15rem);
+}
+
+.banner-container .banner-heading p {
+    margin-bottom: clamp(0.3em,1vw,1.5em);
 }
 
 .banner-container .banner-text{
+    display: flex;
     position: absolute;
     top: 60%;
     left: 10%;
-    font-size: 18px;
     width: 750px;
     font-family: 'FiraSansCondensedRegular',sans-serif;
+    margin-top: clamp(0.3em,3vw,3em);
+}
+
+.banner-container .banner-text p{
+    overflow-wrap: break-word;
+
 }
 
 .banner-container .banner-text button{
@@ -69,3 +80,6 @@
     color:#4B5320;  
 }
 
+@media(max-width: 768px){
+    
+}

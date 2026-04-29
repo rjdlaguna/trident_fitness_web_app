@@ -1,0 +1,101 @@
+.menu-header{
+    box-shadow: 0 0 5px rgba(0,0,0,#4B5320);
+}
+
+.menu-content{
+    background-color: #fff;
+    color: #4B5320;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-content .logo{
+    display: flex;
+}
+
+.menu-content h2{
+    display: flex;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 30px; 
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+}
+
+.menu-content .logo-text{
+    color: #4B5320;
+    text-decoration: none;
+}
+
+.menu-content ul{
+    list-style: none;
+    display: flex;  
+    font-size: 16px;
+}
+
+.menu-content ul li{
+    padding: 20px 15px;
+}
+
+.menu-content ul li a{
+    color: #4B5320;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: border-color 0.3s;
+}
+
+.menu-content ul li a.active{
+    border-bottom: 2px solid #4B5320;
+    display: inline-block;
+}
+
+.menu-content ul li a:hover{
+    border-bottom: 2px solid #4B5320;
+    display: inline-block;
+    transform: border-bottom 0.5s ease-out 0.2s;
+}
+
+.icon{
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+}
+
+.logo-name1{
+    margin-bottom: -12px;
+    margin-top: 15px;
+}
+.logo-name2{
+    margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+    .icon{
+        display: block;
+    }
+
+    .menu-content .nav-link{
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #fff;
+        position:absolute;
+        width: 350px;
+        height: 60vh;
+        top: -800px;
+        right: 0;
+        z-index: 9;
+        transition: top 0.5s;
+    }
+
+    .nav-link.active{
+        top: 80%;
+    }
+
+}
+
+
