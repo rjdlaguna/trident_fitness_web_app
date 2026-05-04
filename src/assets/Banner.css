@@ -15,6 +15,11 @@
     src: url('./fonts/FiraSansCondensed-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'FiraSansCondensedBlack';
+    src: url('./fonts/FiraSansCondensed-Black.ttf');
+}
+
 .banner-container{
     width: 100%;
     position: relative;

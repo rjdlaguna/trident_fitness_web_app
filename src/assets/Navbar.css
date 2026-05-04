@@ -74,6 +74,22 @@
     margin-bottom: 10px;
 }
 
+.menu-content .login-register{
+    margin-right: 10px;
+}
+
+.menu-content .login-register .login-register-button{
+    background-color: #fff;
+    font-size: 0.75em;
+    cursor: pointer;
+    color: #4B5320;
+    border: none;
+}
+
+.menu-content .login-register .login-register-button:hover{
+    border-bottom: 1px solid #4B5320;
+}
+
 @media(max-width: 768px) {
     .icon{
         display: block;

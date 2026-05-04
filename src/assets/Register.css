@@ -1,0 +1,162 @@
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #4B5320;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  color: #4B5320;
+  border-radius: 5px;
+  font-family: 'FiraSansCondensedRegular', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4B5320;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+input[name="birthdate"]{
+    width: 90%;
+}
+
+select{
+    width: 100%;
+}
+
+label{
+    font-family: 'FiraSansCondensedBlack', sans-serif;
+}
+
+.personal-info div label{
+    width: 100%;
+}
+
+.register-modal-backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.register-modal{
+    width: 80%;
+    background: #fff;
+    max-width: 800px;
+    border-radius: 10px;
+    animation: slideDown 0.3s ease;
+    position: absolute;
+    z-index: 20;
+    height: 80%;
+    display: flex;
+    background-color: #4B5320;
+}
+
+.modal-header-left, .modal-header-right{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.modal-header-left h2{
+    font-family: 'FiraSansCondensedBlack', sans-serif;;
+}
+
+.register-left-section, .register-right-section{
+    padding: 1em;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px; 
+}
+
+.register-left-section{
+    background-color: #fff;
+    margin: -10;
+    width: 55%;
+}
+
+.register-right-section{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-right-section .modal-header-right{
+    width: 300px;
+    max-width: 90%;
+}
+
+.register-right-section div button{
+    color: #fff;
+    background-color: #4B5320;
+    border: none;
+}
+
+.btn-register-form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-register{
+    width: 10em;
+    height: 40px;
+    background-color: #4B5320;
+    border-radius: 5px;
+    font-family: 'FiraSansCondensedRegular', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-register:hover{
+    color: #4B5320;
+    background-color: #fff;
+    border:1px solid #4B5320;
+
+}
+
+.personal-info{
+    display: flex;
+}
+
+.google-account-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-account-register div button {
+    margin: 2em 1.5em 1.5em 1.5em;
+    padding: 0.3em;
+    border: 1px solid #4B5320;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-account-register div button:hover {
+    color: #fff;
+    background-color: #4B5320;
+}
+
+.google-account-register button{
+    font-family: 'FiraSansCondensedRegular', sans-serif;
+    background-color: #fff;
+    outline: none;
+    color: #4B5320;
+    border: none;
+}
+
+.close-button{
+    cursor: pointer;
+}
+
