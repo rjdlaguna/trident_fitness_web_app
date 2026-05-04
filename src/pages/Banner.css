@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'AntonFont';
-    src: url('./fonts/Anton-Regular.ttf');
+    src: url('../assets/fonts/Anton-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraSansCondensed';
-    src: url('./fonts/FiraSansCondensed-Italic.ttf');
+    src: url('../assets/fonts/FiraSansCondensed-Italic.ttf');
 }
 
 @font-face {
     font-family: 'FiraSansCondensedRegular';
-    src: url('./fonts/FiraSansCondensed-Regular.ttf');
+    src: url('../assets/fonts/FiraSansCondensed-Regular.ttf');
 }
 
 @font-face {
     font-family: 'FiraSansCondensedBlack';
-    src: url('./fonts/FiraSansCondensed-Black.ttf');
+    src: url('../assets/fonts/FiraSansCondensed-Black.ttf');
 }
 
 .banner-container{

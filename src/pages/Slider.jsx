@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import { imagesData } from './data/bannerImageData.js'
+import { imagesData } from '../assets/data/bannerImageData.js'
 
 export default function Slider(){
 

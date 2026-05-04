@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaBars } from "react-icons/fa6";
-import '../assets/Navbar.css';
-import RegisterModal from "../assets/Register.jsx"
+import '../pages/Navbar.css';
+import RegisterModal from "./Register.jsx"
 export default function Navbar() {
     const content = [
         {

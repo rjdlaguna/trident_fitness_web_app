@@ -1,4 +1,4 @@
-import '../assets/Banner.css'
+import '../pages/Banner.css'
 import Slider from './Slider.jsx'
 export default function Banner() {
     return(
