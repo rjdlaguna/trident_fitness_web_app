@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaBars } from "react-icons/fa6";
 import '../assets/Navbar.css';
+import RegisterModal from "../assets/Register.jsx"
 export default function Navbar() {
     const content = [
         {
@@ -10,13 +11,13 @@ export default function Navbar() {
         },
         {
             id: 2,
-            label: 'Workouts',
-            link: '/workouts'
+            label: 'Trainers',
+            link: '/trainers'
         },
         {
             id: 3,
-            label: 'Trainers',
-            link: '/trainers'
+            label: 'Workouts',
+            link: '/workouts'
         },
                 {
             id: 4,
@@ -35,9 +36,14 @@ export default function Navbar() {
     )
 
     const [isNavOpen, setNavOpen] = useState(false)
+    const [isRegisterModalOpen, setRegisterModalOpen] = useState(false)
 
     const toggleMenu = ()=> {
         setNavOpen(!isNavOpen)
+    }
+
+    const handleButtonClick = () => {
+        setRegisterModalOpen(false)
     }
 
     return(
@@ -60,12 +66,24 @@ export default function Navbar() {
                                         </a></li>
                             ))}
                         </ul>
+                        <div className="login-register">
+                            <button className='login-register-button'>LOGIN</button> | <button className='login-register-button' onClick={() => setRegisterModalOpen(true)}>REGISTER</button>
+                            {isRegisterModalOpen && (
+                                <RegisterModal 
+                                    onSubmit={handleButtonClick} 
+                                    onCancel={handleButtonClick} 
+                                    onClose={handleButtonClick}
+                                    title = "Create your account"
+                                />
+                            )}
+                        </div>
                         <div className="icon" onClick={toggleMenu}>
                             <FaBars />
                         </div>
                     </div>
                 </nav>
             </header>
+
         </>   
     )
 }
