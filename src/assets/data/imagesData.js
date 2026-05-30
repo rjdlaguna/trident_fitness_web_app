@@ -8,6 +8,7 @@ import trainerImage2 from '.././images/male-gym-trainer-lifting-barbell.jpg'
 import trainerImage3 from '.././images/female-gym-trainer-lifting-weights.jpg'
 import trainerImage4 from '.././images/boxing-trainer-preparing-for-sparring-session.jpg'
 import trainerImage5 from '.././images/gym-trainer-doing-crossfit.jpg'
+import trainerImage6 from '.././images/male-gym-trainer-doing-arm-workout.jpg'
 
 
 export const imagesData = [
@@ -37,26 +38,42 @@ export const trainersImage = [
     {
         trainerImageId: 1,
         trainerImageName: 'Male gym trainer standing pose',
-        trainerImageLocation: trainerImage1
+        trainerImageLocation: trainerImage1,
+        trainerName: 'James Lee',
+        trainerSpecialty: 'Strength Training'
     },
     {
         trainerImageId: 2,
         trainerImageName: 'Male gym trainer lifting barbells',
         trainerImageLocation: trainerImage2,
+        trainerName: 'Aaron Williams',
     },
     {
         trainerImageId: 3,
         trainerImageName: 'Female gym trainer lifting weights',
         trainerImageLocation: trainerImage3,
+        trainerName: 'Michelle Wu',
+        trainerSpecialty: 'Aerobics'
     },
     {
         trainerImageId: 4,
         trainerImageName: 'Boxing trainer preparing for sparring session',
         trainerImageLocation: trainerImage4,
+        trainerName: 'Patrick Green',
+        trainerSpecialty: 'Boxing'
     },
     {
         trainerImageId: 5,
         trainerImageName: 'Gym trainer doing crossfit',
         trainerImageLocation: trainerImage5,
+        trainerName: 'Daniel Alvarez',
+        trainerSpecialty: 'CrossFit'
+    },
+    {
+        trainerImageId: 6,
+        trainerImageName: 'Male gym trainer doing arm workout',
+        trainerImageLocation: trainerImage6,
+        trainerName: 'Michael Holland',
+        trainerSpecialty: 'Sports Theraphy'
     }
 ]

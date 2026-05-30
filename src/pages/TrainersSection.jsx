@@ -1,16 +1,21 @@
 import '../pages/TrainersSection.css'
 import { trainersImage } from '../assets/data/imagesData'
+import TrainerCard from '../components/ui/TrainerCard'
+import { useUpdateCarousel } from '../utils/helpers.js';
 export default function TrainersSection(){
     const length = trainersImage.length;
+    const { currentImage, nextImageSlide, prevImageSlide, goToImageSlide } = useUpdateCarousel(trainersImage.length);
+    
+    const left1 = (currentImage - 1 + length) % length;
+    const left2 = (currentImage - 2 + length) % length;
+    const right1 = (currentImage + 1) % length;
+    const right2 = (currentImage + 2) % length;
 
-   /*  useEffect(() => {
-        const slideInterval = setInterval(nextSlide, 4000); // Change image every 3 seconds
-        return () => clearInterval(slideInterval); // Cleanup interval on component unmount
-    }, [current, length]); */
 
     if (!Array.isArray(trainersImage) || length <= 0) {
         return null;
     };
+
 
     return(
         <>
@@ -19,45 +24,54 @@ export default function TrainersSection(){
                     <div className='trainer-images-section'>
                         <h1>Meet the Trainers</h1>
                         <div className="trainer-slider-container">
+                            <button className="arrow-button left" onClick={() => prevImageSlide()}>
+                                &#10094;
+                            </button>
                             <div className='carousel'>
-                                <div className="card">
-                                    <img src={trainersImage[0].trainerImageLocation} alt={trainersImage[0].trainerImageName} className="image" />
-                                    <div className="card-content">
-                                        <p>James Lee</p>
-                                        <p>Strength Training</p>
+                                {trainersImage.map((trainer, index) => (               
+                                    <div
+                                    className={
+                                        index === currentImage
+                                        ? 'card center'
+                                        : index === left1
+                                        ? 'card left-1'
+                                        : index === left2
+                                        ? 'card left-2'
+                                        : index === right1
+                                        ? 'card right-1'
+                                        : index === right2
+                                        ? 'card right-2'
+                                        : 'card hidden'
+                                    }
+                                    key={index}
+                                    >
+                                    {[currentImage, left1, left2, right1, right2].includes(index) && (
+                                        <><img
+                                                src={trainer.trainerImageLocation}
+                                                alt={trainer.trainerImageName}
+                                                className="trainer-image" /><div className="card-content">
+                                                    <p>{trainer.trainerName}</p>
+                                                    <p>{trainer.trainerSpecialty}</p>
+                                                </div></>
+                                    )}
                                     </div>
-                                </div>
-                                <div className="card">
-                                    <img src={trainersImage[1].trainerImageLocation} alt={trainersImage[1].trainerImageName} className="image" />
-                                    <div className="card-content">
-                                        <p>Aaron Williams</p>
-                                        <p>Weightlifting</p>
-                                    </div>
-                                </div>
-                                <div className="card">
-                                    <img src={trainersImage[2].trainerImageLocation} alt={trainersImage[2].trainerImageName} className="image" />
-                                    <div className="card-content">
-                                        <p>Michelle Wu</p>
-                                        <p>Aerobics</p>
-                                    </div>
-                                </div>
-                                <div className="card">
-                                    <img src={trainersImage[3].trainerImageLocation} alt={trainersImage[3].trainerImageName} className="image" />
-                                    <div className="card-content">
-                                        <p>Patrick Green</p>
-                                        <p>Boxing</p>
-                                    </div>
-                                </div>
-                                <div className="card">
-                                    <img src={trainersImage[4].trainerImageLocation} alt={trainersImage[4].trainerImageName} className="image" />
-                                    <div className="card-content">
-                                        <p>Daniel Alvarez</p>
-                                        <p>Crossfit</p>
-                                    </div>
-                                </div>
+                                  ))}
                             </div>
+                            <button className="arrow-button right" onClick={() => nextImageSlide()}>
+                                &#10095;
+                            </button>
+                        </div>
+                        <div className="trainer-dots-container">
+                            {trainersImage.map((_, index) => (
+                                <span
+                                key={index}
+                                className={index === currentImage ? 'trainer-dot trainer-active-dot' : 'trainer-dot'}
+                                onClick={() => goToImageSlide(index)}
+                                ></span>
+                            ))}
                         </div>
                     </div>
+                    
                     {/*<div className="trainer-description-section">
                         <h3>About the Trainer</h3>
                     </div>*/}
