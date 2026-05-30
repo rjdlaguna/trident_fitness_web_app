@@ -19,7 +19,7 @@
 
 .menu-content h2{
     display: flex;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:EmblemaOne, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-left: 30px; 
     font-size: clamp(1.4rem, 3vw, 1.6rem);
 }

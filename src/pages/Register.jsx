@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import '../assets/Register.css';
+import '../pages/Register.css';
 export default function Register( {onSubmit, onCancel, onClose, title}) {
     const [userRegData, setUserRegData] = useState({
         firstname: "",

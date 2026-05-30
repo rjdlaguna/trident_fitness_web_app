@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import './Slider.css';
-import { imagesData } from './data/bannerImageData.js'
+import React, { useEffect } from 'react';
+import '../pages/Slider.css';
+import { imagesData } from '../assets/data/imagesData.js'
+import { useSlider } from '../utils/helpers.js';
 
 export default function Slider(){
 
-  const [current, setCurrent] = useState(0);
+  const { current, nextSlide, prevSlide, goToSlide } = useSlider(imagesData.length);
   const length = imagesData.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
 
   useEffect(() => {
     const slideInterval = setInterval(nextSlide, 4000); // Change image every 3 seconds
@@ -46,7 +39,7 @@ export default function Slider(){
           <span
             key={index}
             className={index === current ? 'dot active-dot' : 'dot'}
-            onClick={() => setCurrent(index)}
+            onClick={() => goToSlide(index)}
           ></span>
         ))}
       </div>
