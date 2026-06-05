@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'EmblemaOne';
+    src: url('../assets/fonts/EmblemaOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FiraSansCondensedRegular';
+    src: url('../assets/fonts/FiraSansCondensed-Regular.ttf');
+}
+@font-face {
+    font-family: 'AntonFont';
+    src: url('../assets/fonts/Anton-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.workout-container{
+    width: 100%;
+    height: 88vh;
+    background-color: #4B5320;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.workout-content-heading{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.workout-content-heading h1{
+    color: #000;
+    text-transform: uppercase;
+    font-family: EmblemaOne, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(24px, 4vw, 2.5rem);
+    color: #fff;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+}
+
+.workout-content-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.workout-content-body .workout-section{
+    width: 22%;
+    height: 75vh;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Initial resting shadow (close to the ground) */
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.09), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.workout-content-body .workout-section:hover{
+    transform: translateY(-12px);
+  
+  /* Deep, soft, multi-layered 3D shadow */
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.workout-content-body .workout-section .training-type-container{
+    display: flex;
+    justify-content: center;
+    height: 35%;
+    width: 100%;
+    border: px solid #fff;
+    /* Coordinates: Bottom, Left-Bottom, Left-Top, Right-Top, Right-Bottom */
+    clip-path: polygon(50% 100%, 0% 62%, 0% 0%, 100% 0%, 100% 62%);
+    background-color: #c28c17;
+    text-transform: uppercase;
+    font-family: 'AntonFont', sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.workout-content-body .workout-section .training-type-container{
+    background-color: #edf1eb;
+}
+
+.workout-content-body .workout-section .training-type-container .training-type{
+    padding: 10px;
+    width: 90%;
+    height: 85%;
+    margin-top: 10px;
+    clip-path: polygon(50% 100%, 0% 62%, 0% 0%, 100% 0%, 100% 62%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.workout-content-body .workout-section .training-type-container .left-content{
+    background-color: #245c27;
+}
+.workout-content-body .workout-section .training-type-container .center-content{
+    background-color: #183d06;
+}
+.workout-content-body .workout-section .training-type-container .right-content{
+    background-color: #0b6b3b;
+}
+
+.workout-content-body .workout-section .training-type-list{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-content-body .workout-section .training-type-list ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.workout-content-body .workout-section .training-type-list ul li{
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-top: 1px solid #fff;
+    color: #4B5320;
+    border-bottom: 1px solid #245c27;
+    padding: 5px;
+    width: 80%;
+    font-family: 'FiraSansCondensedRegular',sans-serif;
+}
+.workout-program-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workout-program-btn button{
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'FiraSansCondensedRegular',sans-serif;
+}
+
+.workout-content-body .workout-section .left-btn .see-program-btn{
+    background-color: #183d06;
+    transform: translateY(-3px);
+}
+
+.workout-content-body .workout-section .center-btn .see-program-btn{
+    background-color: #245c27;
+    transform: translateY(-3px);
+}
+
+.workout-content-body .workout-section .right-btn .see-program-btn{
+    background-color: #0b6b3b;
+    transform: translateY(-3px);
+}

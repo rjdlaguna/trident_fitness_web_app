@@ -16,7 +16,6 @@ export default function TrainersSection(){
         return null;
     };
 
-
     return(
         <>
             <div className='trainers-container'>
@@ -71,10 +70,6 @@ export default function TrainersSection(){
                             ))}
                         </div>
                     </div>
-                    
-                    {/*<div className="trainer-description-section">
-                        <h3>About the Trainer</h3>
-                    </div>*/}
                 </div>
             </div>
         </>
