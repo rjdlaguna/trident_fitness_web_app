@@ -7,11 +7,9 @@
 
 .trainers-container{
     width: 100%;
-    height: 600px;
+    height: 95vh;
     background-color: #fff;
     border: 1px solid #000;
-    display: block;
-    position: relative;
 }
 
 .trainer-images-section h1{
