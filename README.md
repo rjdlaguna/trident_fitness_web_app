@@ -18,5 +18,6 @@ Note: This will impact Vite dev & build performances.
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 Landing Page
-**<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/b8a9f7a9-b385-49ce-8c8f-1785e181710d" />
+**<img width="1920" height="2458" alt="screencapture-localhost-5173-2026-06-05-15_29_00" src="https://github.com/user-attachments/assets/a79943a9-7f73-41f5-8af5-667f0edbdc65" />
+
 **
