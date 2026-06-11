@@ -3,6 +3,7 @@ import Banner from "./Banner"
 import TrainersSection from "./TrainersSection"
 import WorkoutSection from "./WorkoutSection"
 import ContactSection from "./ContactSection"
+import AboutSection from "./AboutSection"
 export default function Home() {
     return(
         <>
@@ -11,6 +12,7 @@ export default function Home() {
             <TrainersSection />
             <WorkoutSection />
             <ContactSection />
+            <AboutSection />
         </>
     )
 }

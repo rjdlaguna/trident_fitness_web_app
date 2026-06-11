@@ -1,3 +1,4 @@
+//WorkoutSection.jsx
 import '../pages/WorkoutSection.css';
 
 export default function WorkoutSection(){
