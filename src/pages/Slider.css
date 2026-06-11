@@ -1,78 +1,253 @@
-.slider-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  overflow: hidden; /* Ensures slides stay within the container */
+/* Slider.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    opacity: 60%;
+/* ========================= */
+/* MAIN CONTAINER */
+/* ========================= */
+
+.slider-container{
+
+  width:100%;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#000;
 }
 
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+/* ========================= */
+/* SLIDES */
+/* ========================= */
+
+.slide{
+
+  opacity:0;
+
+  transition:opacity 1s ease;
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
 }
 
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1);
-  position: relative; /* Active slide takes up space in flow */
+.slide.active{
+
+  opacity:1;
+
+  position:relative;
+
+  z-index:1;
 }
 
-/* Navigation Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 24px;
+/* ========================= */
+/* IMAGE */
+/* ========================= */
+
+.image{
+
+  width:100%;
+
+  height:100vh;
+
+  object-fit:cover;
+
+  display:block;
+
+  opacity:0.6;
 }
 
-.prev {
-  left: 10px;
+/* ========================= */
+/* NAVIGATION ARROWS */
+/* ========================= */
+
+.arrow{
+
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  z-index:10;
+
+  width:50px;
+  height:50px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background-color:rgba(0,0,0,0.45);
+
+  color:#fff;
+
+  font-size:1.5rem;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.next {
-  right: 10px;
+.arrow:hover{
+
+  background-color:rgba(0,0,0,0.7);
+
+  transform:translateY(-50%) scale(1.08);
 }
 
-/* Dots Indicators */
-.dots-container {
-  text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0%;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
+.prev{
+  left:20px;
 }
 
-.dot {
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.next{
+  right:20px;
 }
 
-.active-dot, .dot:hover {
-  background-color: #717171;
+/* ========================= */
+/* DOTS */
+/* ========================= */
+
+.dots-container{
+
+  position:absolute;
+
+  bottom:25px;
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:10px;
+
+  z-index:10;
+}
+
+.dot{
+
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background-color:#bbb;
+
+  cursor:pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.active-dot,
+.dot:hover{
+
+  background-color:#fff;
+
+  transform:scale(1.2);
+}
+
+/* ========================= */
+/* LARGE TABLETS */
+/* ========================= */
+
+@media (max-width: 1024px){
+
+  .image{
+    height:90vh;
+  }
+
+  .arrow{
+    width:45px;
+    height:45px;
+  }
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 768px){
+
+  .image{
+    height:80vh;
+  }
+
+  .arrow{
+
+    width:42px;
+    height:42px;
+
+    font-size:1.2rem;
+  }
+
+  .prev{
+    left:12px;
+  }
+
+  .next{
+    right:12px;
+  }
+
+  .dots-container{
+    bottom:18px;
+  }
+
+  .dot{
+    width:11px;
+    height:11px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 480px){
+
+  .image{
+    height:70vh;
+  }
+
+  .arrow{
+
+    width:36px;
+    height:36px;
+
+    font-size:1rem;
+  }
+
+  .prev{
+    left:8px;
+  }
+
+  .next{
+    right:8px;
+  }
+
+  .dots-container{
+    bottom:14px;
+    gap:8px;
+  }
+
+  .dot{
+    width:10px;
+    height:10px;
+  }
 }

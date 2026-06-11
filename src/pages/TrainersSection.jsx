@@ -1,3 +1,4 @@
+//TrainersSection.jsx
 import '../pages/TrainersSection.css'
 import { trainersImage } from '../assets/data/imagesData'
 import TrainerCard from '../components/ui/TrainerCard'
