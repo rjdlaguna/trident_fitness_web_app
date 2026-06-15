@@ -1,5 +1,6 @@
 import Navbar from "./Navbar"
 import Banner from "./Banner"
+import Footer from "../components/ui/Footer"
 import TrainersSection from "./TrainersSection"
 import WorkoutSection from "./WorkoutSection"
 import ContactSection from "./ContactSection"
@@ -13,6 +14,7 @@ export default function Home() {
             <WorkoutSection />
             <ContactSection />
             <AboutSection />
+            <Footer />
         </>
     )
 }

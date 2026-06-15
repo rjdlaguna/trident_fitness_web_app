@@ -86,14 +86,10 @@
 .banner-container .banner-text button{
     background-color:#778729;
     color:white;
-
     width:fit-content;
-
     padding:14px 24px;
-
     border:none;
     border-radius:5px;
-
     font-family:'FiraSansCondensedRegular', sans-serif;
     font-size:clamp(0.9rem, 1vw, 1.1rem);
 
