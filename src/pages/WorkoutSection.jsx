@@ -4,7 +4,7 @@ import '../pages/WorkoutSection.css';
 export default function WorkoutSection(){
     return(
         <>
-            <div className='workout-container'>
+            <div className='workout-container' id="workouts-section">
                 <div className='workout-content-heading'>
                     <h1>Discover Your Perfect Workout</h1>
                 </div>

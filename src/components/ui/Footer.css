@@ -114,6 +114,17 @@
     color:#78882f;
 }
 
+.footer-content-section ul li a{
+    text-decoration: none;
+    color: #4B5320;
+    margin:6px 0;
+}
+.footer-content-section ul li a:hover{
+    color:#78882f;
+    cursor:pointer;
+    transition:color 0.3s ease;
+}
+
 /* ========================= */
 /* TABLET */
 /* ========================= */

@@ -19,7 +19,7 @@ export default function TrainersSection(){
 
     return(
         <>
-            <div className='trainers-container'>
+            <div className='trainers-container' id="trainers-section">
                 <div className='trainers-content'>
                     <div className='trainer-images-section'>
                         <h1>Meet the Trainers</h1>

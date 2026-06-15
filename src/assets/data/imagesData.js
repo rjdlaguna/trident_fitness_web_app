@@ -77,3 +77,36 @@ export const trainersImage = [
         trainerSpecialty: 'Sports Theraphy'
     }
 ]
+
+export const nav = [
+    {
+        id: 1,
+        label: 'Home',
+        link: '/',
+        anchorTag: '#banner-section'
+    },
+    {
+        id: 2,
+        label: 'Trainers',
+        link: '/trainers',
+        anchorTag: '#trainers-section'
+    },
+    {
+        id: 3,
+        label: 'Workouts',
+        link: '/workouts',
+        anchorTag: '#workouts-section'
+    },
+            {
+        id: 4,
+        label: 'Contact',
+        link: '/contact',
+        anchorTag: '#contact-section'
+    },
+            {
+        id: 5,
+        label: 'About',
+        link: '/about',
+        anchorTag: '#about-section'
+    },
+]

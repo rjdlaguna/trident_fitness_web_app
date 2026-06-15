@@ -4,7 +4,7 @@ import Slider from './Slider.jsx'
 
 export default function Banner() {
     return (
-        <div className='banner-container'>
+        <div className='banner-container' id="banner-section">
             <Slider />
             <div className='banner-heading'>
                 <p>TRAIN HARD.</p>

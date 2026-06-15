@@ -1,6 +1,15 @@
 
+import { useState } from 'react';
 import '../ui/Footer.css'; 
+import { nav } from '../../assets/data/imagesData'
+import React from 'react';
 export default function Footer() {
+
+    const [hoveredLink, setHoveredLink] = useState(
+            nav.length > 0 ? nav[0].id : null
+        )
+
+
     return(
         <>
             <div className='footer-container'>
@@ -12,13 +21,18 @@ export default function Footer() {
                         </div>
                         <div className='footer-content-section'>
                             <h3>Quick Links</h3>
-                            <ul>
-                                <li>Home</li>
-                                <li>Workouts</li>
-                                <li>Trainers</li>
-                                <li>Contact</li>
-                                <li>About Us</li>
-                            </ul>
+                           <ul className="nav-link">
+                            {nav.map((item) => (
+                                <li key={item.id}>
+                                    <a 
+                                        href={item.anchorTag} 
+                                        onMouseEnter={() => setHoveredLink(item.id)}
+                                        className={hoveredLink == item.id ? "active" : ""}
+                                        >
+                                            {item.label.toUpperCase()}
+                                        </a></li>
+                            ))}
+                        </ul>
                         </div>
                         <div className='footer-content-section'>
                             <h3>Services</h3>
