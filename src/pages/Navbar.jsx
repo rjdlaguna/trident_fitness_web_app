@@ -2,37 +2,11 @@ import { useState } from 'react';
 import { FaBars } from "react-icons/fa6";
 import '../pages/Navbar.css';
 import RegisterModal from "./Register.jsx"
+import { nav } from '../assets/data/imagesData'
 export default function Navbar() {
-    const content = [
-        {
-            id: 1,
-            label: 'Home',
-            link: '/'
-        },
-        {
-            id: 2,
-            label: 'Trainers',
-            link: '/trainers'
-        },
-        {
-            id: 3,
-            label: 'Workouts',
-            link: '/workouts'
-        },
-                {
-            id: 4,
-            label: 'Contact',
-            link: '/contact'
-        },
-                {
-            id: 5,
-            label: 'About',
-            link: '/about'
-        },
-    ]
 
      const [hoveredLink, setHoveredLink] = useState(
-        content.length > 0 ? content[0].id : null
+        nav.length > 0 ? nav[0].id : null
     )
 
     const [isNavOpen, setNavOpen] = useState(false)
@@ -52,13 +26,13 @@ export default function Navbar() {
                 <nav>
                     <div className='menu-content'>
                         <div className='logo'>
-                            <h2><a className ="logo-text" href={content[0].link}><p className="logo-name1">TRIDENT</p><p className="logo-name2">FITNESS</p></a></h2>
+                            <h2><a className ="logo-text" href={nav[0].link}><p className="logo-name1">TRIDENT</p><p className="logo-name2">FITNESS</p></a></h2>
                         </div>
                         <ul className={isNavOpen ? "nav-link active" : "nav-link"}>
-                            {content.map((item) => (
+                            {nav.map((item) => (
                                 <li key={item.id}>
                                     <a 
-                                        href={item.link} 
+                                        href={item.anchorTag} 
                                         onMouseEnter={() => setHoveredLink(item.id)}
                                         className={hoveredLink == item.id ? "active" : ""}
                                         >

@@ -7,7 +7,7 @@ import mapPinIcon from '../assets/icons/map_pin.png';
 export default function ContactSection(){
     return(
         <>
-            <div className='contact-container'>
+            <div className='contact-container' id="contact-section">
                 <div className="contact-heading">
                     <h1>Talk to Us</h1>
                 </div>
