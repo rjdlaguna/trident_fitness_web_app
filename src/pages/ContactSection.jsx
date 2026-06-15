@@ -2,7 +2,7 @@
 import '../pages/ContactSection.css';
 import chatIcon from '../assets/icons/chat.png';
 import phoneIcon from '../assets/icons/phone.png';
-import emailIcon from '../assets/icons/email.png';
+import mapPinIcon from '../assets/icons/map_pin.png';
 
 export default function ContactSection(){
     return(
@@ -10,6 +10,28 @@ export default function ContactSection(){
             <div className='contact-container'>
                 <div className="contact-heading">
                     <h1>Talk to Us</h1>
+                </div>
+                <div className="contact-email-section">
+                    <h3>Any questions or comments? Just write us a message!</h3>
+                    <div className='contact-email-form'>
+                        <div className='contact-email-info'>
+                            <div className='contact-email-field'>
+                                <label>Email</label>
+                                <input type="email" name="email" placeholder='Enter a valid email address' />
+                            </div>
+                            <div className='contact-email-field'>
+                                <label>Name</label>
+                                <input type="text" name="name" placeholder='Enter your Name' />
+                            </div>
+                        </div>
+                        <div className='contact-email-message'>
+                            <label>Message</label>
+                            <textarea name="message"></textarea>
+                        </div>
+                        <div className='contact-email-button'>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
                 </div>
                 <div className="contact-body-content">
                     <div className="contact-cards">
@@ -39,14 +61,14 @@ export default function ContactSection(){
                         </div>
                         <div className="contact-card">
                             <div className="contact-card-icon">
-                                <img src={emailIcon} alt="Email Icon" />
+                                <img src={mapPinIcon} alt="Map Pin Icon" />
                             </div>
                             <div className="contact-card-heading">
-                                <h2 className='contact-card-heading-title'>Email Us</h2>
+                                <h2 className='contact-card-heading-title'>Location</h2>
                             </div>
                             <div className="contact-card-body">
-                                <p>Fill out the form and we'll get back to you within 24 hours.</p>
-                                <button className="contact-card-button">Send Email</button>
+                                <p>#100 Payapa St. San Joaquin, Magalang, Pampanga, 2011</p>
+                                <button className="contact-card-button">Check Map</button>
                             </div>
                         </div>
                     </div>
